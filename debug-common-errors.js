@@ -24,22 +24,22 @@ Think about which debugging methods you found most useful and how you might appl
 // Description:
 // This program is intended to display a simple prompt in the console but fails to run.
 
-console.log("Welcome to the bootcamp
+console.log("Welcome to the bootcamp")  
+//console.log is missing the closing parenthisis and the string is missing a quotation mark
 
-// What’s Wrong?
 
 
 // Program B
 // Description:
 // This code attempts to multiply each number in an array by 2 and display the results. However, it crashes at runtime.
 
-let numbers = [2, 4, "eight"];
+let numbers = [2, 4, 8];
 for (let i = 0; i < numbers.length; i++) {
   let doubled = numbers[i] * 2;
   console.log(doubled);
 }
 
-// What’s Wrong?
+// The code is attemtping to multiply a string by two. Changed the stringg "eight", to the correct number.
 
 
 
@@ -51,12 +51,12 @@ function isPrime(num) {
   if (num < 2) return false;
   for (let i = 2; i < num; i++) {
     if (num % i === 0) {
-      return true;  // Supposed to indicate num is NOT prime
+      return false;  // Supposed to indicate num is NOT prime
     }
   }
-  return false; // Supposed to indicate num IS prime
+  return true; // Supposed to indicate num IS prime
 }
 
-console.log(isPrime(7)); // Expected true but gets false
+console.log(isPrime(11)); // Expected true but gets false
 
-// What’s Wrong?
+// The false and true were in the wrong places so I switched them. num % i === 0 means that the number is divisible by i and there is no remainder, this would mean this part of code should indicate it is false instead of true. 
